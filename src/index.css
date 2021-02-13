@@ -7,7 +7,281 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body > #root {
+  height: 100%;
+}
+
+body {
+  overflow-y: scroll;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.rooter {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fixed-bar.ui.menu {
+  border-radius: 0 !important;
+  flex: none !important;
+  background-color: #fafafa !important;
+}
+
+.ui.pointing.secondary.menu {
+  padding-left: 25%;
+  padding-top: 1em;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 2em !important;
+  padding-bottom: 1em !important;
+  flex: none !important;
+}
+
+/* Project */
+.viewer {
+  width: 100% !important;
+  flex: 1 1 auto;
+  display: flex !important;
+  flex-direction: column;
+}
+
+.viewer > .segment:nth-child(1) {
+  flex: none;
+  margin: 0 !important;
+}
+
+.viewer > .segment:nth-child(2) {
+  flex: 1 1 auto;
+  margin: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.viewer > .segment {
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  padding-bottom: 2em !important;
+}
+
+.viewer > .segment > .breadcrumb {
+  margin-left: 1em;
+}
+
+.viewer > .segment > .cards {
+  flex-flow: row;
+  overflow-x: auto;
+  min-height: 100% !important;
+}
+
+.viewer > .segment > .cards > .item-card {
+  min-height: 50% !important;
+  min-width: 20% !important;
+  flex: none;
+}
+
+.viewer > .segment > .cards > .item-card > .content {
+  background-color: #fafafa !important;
+  display: flex !important;
+  flex-direction: column;
+}
+
+.viewer > .segment > .cards > .item-card > .content > .header {
+  flex: none;
+}
+
+.viewer > .segment > .cards > .item-card > .content > .description {
+  flex: 1 1 auto;
+}
+
+.viewer > .segment > .cards > .item-card > .content > .header > .floating-card {
+  position: absolute;
+  right: 1em;
+}
+
+.viewer > .segment > .cards > .item-card > .content > .description > .list > .item {
+  width: auto;
+}
+
+.viewer > .segment > .cards > .item-card > .content > .description > .list > .item > .card {
+  width: auto;
+  background-color: #f3f3f3 !important;
+}
+
+.viewer > .segment > .cards > .item-card > .content > .description > .list > .item > .card > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: auto;
+  padding: 0.5em;
+}
+
+.viewer > .segment > .cards > .item-card > .content > .description > .list > .item > .card > div > div:first-child {
+  flex: none;
+}
+
+.viewer > .segment > .cards > .item-card > .content > .description > .list > .item > .card > div > div:nth-child(2) {
+  flex: 1 1 auto;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+
+.viewer > .segment > .cards > .item-card > .content > .description > .list > .item > .card > div > div:nth-child(2) > pre {
+  border-bottom: 1px solid rgba(34,36,38,.15);
+  padding-bottom: 0.5em;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin: 0 !important;
+}
+
+.viewer > .segment > .cards > .item-card > .content > .description > .list > .item > .card > div > div:nth-child(2) > div {
+  padding-top: 0.5em;
+}
+
+.viewer > .segment > .cards > .item-card > .content > .description > .list > .item > .card > div > div:last-child {
+  flex: none;
+}
+
+.viewer > .segment > .cards > .form-card {
+  min-height: 10em !important;
+  max-height: 10em !important;
+  min-width: 15% !important;
+}
+
+.viewer > .segment > .cards > .dotted-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: dashed !important;
+  border-width: 2px !important;
+  box-shadow: none !important;
+  min-height: 10em !important;
+  max-height: 10em !important;
+  min-width: 15% !important;
+}
+
+.viewer > .segment > .cards > .dotted-card:hover > * {
+  text-decoration-color: #4183c4;
+  text-decoration: underline;
+}
+
+/* Profile */
+.ui.container.centered {
+  width: 50%;
+}
+
+.ui.divided.relaxed.list > .item {
+  margin-bottom: 1em;
+}
+
+.ui.divided.relaxed.list > .item > .new {
+  margin-top: 1.5em;
+}
+
+.ui.divided.relaxed.list > .item:not(.search) > .content {
+  margin-top: 1em;
+}
+
+.ui.divided.relaxed.list > .item > .content > .header {
+  margin-bottom: 0.5em;
+}
+
+.ui.divided.relaxed.list > .item > .content > .header > .header > a:hover {
+  text-decoration-color: #4183c4;
+  text-decoration: underline;
+}
+
+.ui.divided.relaxed.list > .item > .content > .description {
+  margin-bottom: 1em;
+  overflow-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.ui.divided.relaxed.list > .item > .flex {
+  display: flex;
+}
+
+.ui.divided.relaxed.list > .item > .content > .header > .ribbon {
+  position: absolute;
+  right: 1em;
+}
+
+.ui.divided.relaxed.list > .item > .flex > .ui.search {
+  padding-right: 1em;
+  flex: 1 1 auto;
+}
+
+.ui.divided.relaxed.list > .item > .flex > .ui.search > .ui.icon.input {
+  width: 100%;
+}
+
+.ui.search .prompt {
+  border-radius: 0 !important;
+}
+
+.centered-flex-container {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.centered-flex-container > .segment:nth-child(1) {
+  flex: 1 1 auto;
+  max-width: 25% !important;
+}
+
+.centered-flex-container > .segment:nth-child(1) > .container {
+  margin-top: -4em;
+  min-width: 12em;
+  width: 60%;
+  float: right;
+}
+
+.centered-flex-container > .segment:nth-child(1) > .container > .header > .content {
+  overflow-wrap: break-word;
+  display: block !important;
+}
+
+.centered-flex-container > .segment:nth-child(2) {
+  flex: 1 1 auto;
+  max-width: 50% !important;
+}
+
+@media only screen and (max-width:767px) {
+  .centered-flex-container {
+   flex-direction: column !important
+  }
+
+  .centered-flex-container > .segment:nth-child(1) {
+    max-width: 100% !important;
+  }
+
+  .centered-flex-container > .segment:nth-child(1) > .container {
+    display: flex;
+    margin-top: 0em;
+    height: 8em;
+    width: 100%;
+    float: none;
+  }
+
+  .centered-flex-container > .segment:nth-child(1) > .container > .header {
+    flex: 1 1 auto;
+    margin: 1em;
+  }
+
+  .centered-flex-container > .segment:nth-child(2) {
+    flex: 1 1 auto;
+    align-items: center;
+    max-width: 100% !important;
+  }
 }
